@@ -3,6 +3,8 @@ import { FilterValuesType } from "./App";
 import { AddItemForm } from "./AddItemForm";
 /* import { title } from "process"; */
 import { EditableSpan } from "./EditableSpan";
+import { Button, Checkbox, IconButton } from "@mui/material";
+import { Delete } from "@mui/icons-material";
 
 export type TaskType = {
   id: string;
@@ -80,7 +82,10 @@ export function Todolist(props: PropsType) {
     <div>
       <h3>
         <EditableSpan title={props.title} onChange={removeTodolistTitle} />
-        <button onClick={removeTodolist}>X</button>
+
+        <IconButton onClick={removeTodolist}>
+          <Delete />
+        </IconButton>
       </h3>
       <AddItemForm addItem={addTask} />
       {/*       <div>
@@ -108,38 +113,43 @@ export function Todolist(props: PropsType) {
           };
 
           return (
-            <li key={t.id} className={t.isDone ? "is-done" : ""}>
-              <input
-                type="checkbox"
+            <div key={t.id} className={t.isDone ? "is-done" : ""}>
+              <Checkbox
+                color={"primary"}
                 onChange={onChangeHandler}
                 checked={t.isDone}
               />
               {/* <span>{t.title}</span> */}
               <EditableSpan title={t.title} onChange={onChangeTitleHandler} />
-              <button onClick={onRemoveHandler}>x</button>
-            </li>
+
+              <IconButton onClick={onRemoveHandler}>
+                <Delete />
+              </IconButton>
+            </div>
           );
         })}
       </ul>
       <div>
-        <button
+        <Button
+          variant={props.filter === "all" ? "contained" : "text"}
           onClick={onAllClickHandler}
-          className={props.filter === "all" ? "active-filter" : ""}
         >
           All
-        </button>
-        <button
+        </Button>
+        <Button
+          color={"primary"}
           onClick={onActiveClickHandler}
-          className={props.filter === "active" ? "active-filter" : ""}
+          variant={props.filter === "active" ? "contained" : "text"}
         >
           Active
-        </button>
-        <button
+        </Button>
+        <Button
+          color={"secondary"}
           onClick={onAComplitedClickHandler}
-          className={props.filter === "completed" ? "active-filter" : ""}
+          variant={props.filter === "completed" ? "contained" : "text"}
         >
           Completed
-        </button>
+        </Button>
       </div>
     </div>
   );
