@@ -13,3 +13,10 @@ TodoList - упрошенный аналог Trello , с возможность 
 ```
 git clone https://github.com/scsi9/todolist.git to copy the repository to your computer
 ```
+
+### Demo
+
+
+https://github.com/scsi9/todolist/assets/17857895/a752df0b-ab43-41e1-a3ec-930d555c45e4
+
+
