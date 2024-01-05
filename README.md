@@ -4,9 +4,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
+## Description
+TodoList 
+with the ability to add sheets from tasks to them, it is possible to edit sheets/tasks, add/remove sheets/tasks
 
 ### `yarn start`
 
