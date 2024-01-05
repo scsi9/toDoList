@@ -1,3 +1,5 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/05ed4e342ad23922888b/maintainability)](https://codeclimate.com/github/scsi9/todolist/maintainability)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
