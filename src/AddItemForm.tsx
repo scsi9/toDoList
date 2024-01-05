@@ -1,5 +1,5 @@
 import { ControlPoint } from "@mui/icons-material";
-import { Button, IconButton, TextField } from "@mui/material";
+import { IconButton, TextField } from "@mui/material";
 import React, { ChangeEvent, KeyboardEvent, useState } from "react";
 
 type AddItemFormPropsType = {
@@ -16,7 +16,7 @@ export function AddItemForm(props: AddItemFormPropsType) {
   const onKeyDownPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
     setError(null);
     if (e.ctrlKey && e.key === "Enter") {
-      props.addItem(title); /* сменил с addTask на addItem */
+      props.addItem(title);
       setTitle("");
     }
   };

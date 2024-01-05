@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
+
 import { TaskType, Todolist } from "./Todolist";
 import { v1 } from "uuid";
 import { AddItemForm } from "./AddItemForm";
@@ -28,15 +28,6 @@ type TasksStateType = {
 };
 
 function App() {
-  /* let [tasks, setTasks] = useState([
-    { id: v1(), title: "CSS", isDone: true },
-    { id: v1(), title: "JS", isDone: true },
-    { id: v1(), title: "React", isDone: false },
-    { id: v1(), title: "Redux", isDone: false },
-  ]); */
-
-  // let [filter, setFilter] = useState<FilterValuesType>("all");
-
   function removeTask(id: string, todoListid: string) {
     let tasks = tasksObj[todoListid];
     let filteredTasks = tasks.filter((t) => {

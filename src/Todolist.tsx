@@ -1,7 +1,7 @@
 import React, { ChangeEvent, KeyboardEvent, useState } from "react";
 import { FilterValuesType } from "./App";
 import { AddItemForm } from "./AddItemForm";
-/* import { title } from "process"; */
+
 import { EditableSpan } from "./EditableSpan";
 import { Button, Checkbox, IconButton } from "@mui/material";
 import { Delete } from "@mui/icons-material";
@@ -31,30 +31,6 @@ type PropsType = {
 };
 
 export function Todolist(props: PropsType) {
-  /*   const [title, setTitle] = useState("");
-  const [error, setError] = useState<string | null>(null); */
-
-  /*   const onNewTitleChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    setTitle(e.currentTarget.value);
-  };
-
-  const onKeyDownPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
-    setError(null);
-    if (e.ctrlKey && e.key === "Enter") {
-      props.addTask(title, props.id);
-      setTitle("");
-    }
-  };
-
-  const addTask = () => {
-    if (title.trim() !== "") {
-      props.addTask(title, props.id);
-      setTitle("");
-    } else {
-      setError("Field is requered");
-    }
-  }; */
-
   const onAllClickHandler = () => {
     props.changeFilter("all", props.id);
   };
@@ -88,16 +64,6 @@ export function Todolist(props: PropsType) {
         </IconButton>
       </h3>
       <AddItemForm addItem={addTask} />
-      {/*       <div>
-        <input
-          value={title}
-          onChange={onNewTitleChangeHandler}
-          onKeyDown={onKeyDownPressHandler}
-          className={error ? "error" : ""}
-        />
-        <button onClick={addTask}>+</button>
-        {error && <div className="error-message">{error}</div>}
-      </div> */}
       <ul>
         {props.tasks.map((t) => {
           const onRemoveHandler = () => {
@@ -119,7 +85,7 @@ export function Todolist(props: PropsType) {
                 onChange={onChangeHandler}
                 checked={t.isDone}
               />
-              {/* <span>{t.title}</span> */}
+
               <EditableSpan title={t.title} onChange={onChangeTitleHandler} />
 
               <IconButton onClick={onRemoveHandler}>
