@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Pet проект
 TodoList - упрошенный аналог Trello , с возможность добавлять/удалять доски, внутри досок добавлять/удалять задачи, есть возможность редактировать доску/задачи.
-Проект написан на JS/TS, для стилизации использовалась Material UIhttps://github.com/scsi9/todolist/blob/master/README.md
+Проект написан на JS/TS, для стилизации использовалась Material UI https://github.com/scsi9/todolist/blob/master/README.md
 
 ### Установка и запуск
 
